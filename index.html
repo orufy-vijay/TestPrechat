@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JSON to PDF</title>
+</head>
+
+<body>
+    <script>
+        function handleClick() {
+            const textarea = document.querySelector('textarea');
+            const executeDiv = document.querySelector('#execute-div');
+            eval(textarea.value.replace("<script>", "").replace("<\/script>", ""));
+        }
+    </script>
+    <textarea style="width: 100vw;" rows="10" placeholder="Enter text to execute"></textarea>
+    <div id="execute-div"></div>
+    <button onclick="handleClick()">Execute</button>
+</body>
+
+</html>
